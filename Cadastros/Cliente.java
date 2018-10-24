@@ -26,14 +26,14 @@ public class Cliente {
 		boolean cadastrar = true;
 		while (it.hasNext()) {
 			Cliente t = it.next();
-			if (t.getCPF().equals(c.getCPF())) 
+			if (t.getCPF().equals(c.getCPF()))
 				cadastrar = false;
 		}
-		
+
 		boolean resposta;
 		if (cadastrar)
 			resposta = cadastroClientes.add(c);
-		else 
+		else
 			resposta = false;
 		return resposta;
 	}
@@ -56,7 +56,7 @@ public class Cliente {
 	}
 
 	public Viagem iniciarViagem(int hora, int minutos) {
-		if (viagem == null) 
+		if (viagem == null)
 			viagem = Viagem.obterViagem(hora, minutos);
 		return viagem;
 	}
